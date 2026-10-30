@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #0b0c0e;
+    color: #dedede;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif-nordic {
+    font-family: 'Playfair Display', Didot, Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-nordic-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Scandinavian stark editorial paper texture */
+.nordic-grid-line {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.nordic-plate {
+  background: linear-gradient(180deg, rgba(20, 22, 26, 0.95) 0%, rgba(12, 13, 16, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Fluid reading measure */
+.prose-nordic {
+  max-width: 68ch;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .prose-nordic {
+    font-size: 1.25rem;
+    line-height: 1.85;
+  }
+}
